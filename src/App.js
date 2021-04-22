@@ -9,12 +9,6 @@ class App extends React.Component {
     employees: []
   };
 
-  // removeEmployee = id => {
-
-  // const employees = this.state.employees.filter(employee => employee.id !== id);
-
-  //   this.setState({ employees });
-  // };
   componentDidMount() {
     this.getEmployees();
   }
@@ -30,7 +24,7 @@ class App extends React.Component {
     console.log(this.state.employees)
     return (
 
-      <div>
+      <div className="container-lg">
         <Header/>
         <TableHeader/>
         <div>

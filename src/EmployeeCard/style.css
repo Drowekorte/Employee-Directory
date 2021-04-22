@@ -1,23 +1,23 @@
 table {
   background: #fff;
-  border-radius: 2px;
   height: 100px;
-  margin: 1rem;
-  position: flex-start;
-  width: 99%;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  margin-bottom: 2%;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 3px 4px rgb(182, 182, 182), 0 3px 3px #999;
 }
 
 img {
   border-radius: 50%;
   height: 90%;
   overflow: hidden;
-  position: right;
-  margin-left: 20px;
+  margin-left: 40%;
+  box-shadow: 0 3px 2px #999, 0 3px 2px #999;
 }
 
 td {
   width: 25%;
   text-align: left;
-  padding-left: 10px;
+  /* padding-left: 10px; */
+  align-items: center;
 }
