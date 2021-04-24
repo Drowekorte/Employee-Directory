@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import SearchForm from "./SearchForm";
-import SortFilter from "./SortFilter";
+// import SortFilter from "./SortFilter";
 import TableHeader from "./TableHeader";
 import EmployeeCard from "./EmployeeCard";
 import API from "./API";
@@ -50,7 +50,7 @@ class App extends Component {
           handleInputChange={this.handleInputChange}
         />
         <div>
-      <SortFilter />
+      {/* <SortFilter /> */}
         </div>
       </div>
         <TableHeader />
