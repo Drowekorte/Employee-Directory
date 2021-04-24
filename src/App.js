@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import SearchForm from "./SearchForm";
+import SortFilter from "./SortFilter";
 import TableHeader from "./TableHeader";
 import EmployeeCard from "./EmployeeCard";
 import API from "./API";
 
-class App extends React.Component {
+class App extends Component {
   state = {
     search: "",
     employees: []
@@ -22,12 +23,21 @@ class App extends React.Component {
   };
 
   filterEmployees = (employee) => {
-    if (employee.name.includes(this.state.search)) {
+    if (employee.name.first.includes(this.state.search)) {
+      return true;
+    }
+    if (employee.name.last.includes(this.state.search)) {
       return true;
     }
     if (employee.email.includes(this.state.search)) {
       return true;
     }
+    return false;
+  }
+
+  handleInputChange = e => {
+    const { value } = e.target;
+    this.setState({ search: value });
   }
 
   render() {
@@ -36,12 +46,16 @@ class App extends React.Component {
         <Header />
         <div>
         <SearchForm
-          search={this.state.search}
+          value={this.state.search}
+          handleInputChange={this.handleInputChange}
         />
+        <div>
+      <SortFilter />
+        </div>
       </div>
         <TableHeader />
         <div>
-          {this.state.employees.map((burrito) => (
+          {this.state.employees.filter(this.filterEmployees).map((burrito) => (
             <EmployeeCard
               key={Math.random()}
               image={burrito.picture.medium}

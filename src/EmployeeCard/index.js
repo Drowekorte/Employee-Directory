@@ -2,7 +2,9 @@ import React from "react";
 import "./style.css";
 
 function EmployeeCard(props) {
+  
   return (
+
     <table>
       <tr>
         <td><img className="employeePhoto" src={props.image} alt={props.name} /></td>
@@ -14,7 +16,7 @@ function EmployeeCard(props) {
 
 
   );
-}
 
+}
 export default EmployeeCard;
 
